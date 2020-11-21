@@ -1,6 +1,7 @@
 #include "Application.h"
 
-#include <stdio.h>
+#include "Log.h"
+#include "Events/ApplicationEvent.h"
 
 namespace Axolotl {
 
@@ -11,6 +12,16 @@ namespace Axolotl {
 	}
 
 	void Application::Run() {
+		WindowResizeEvent e(1280, 720);
+		if (e.IsInCategory(EventCategoryApplication))
+		{
+			AX_LOG_TRACE(e);
+		}
+		if (e.IsInCategory(EventCategoryInput))
+		{
+			AX_LOG_TRACE(e);
+		}
+
 		while (true);
 	}
 

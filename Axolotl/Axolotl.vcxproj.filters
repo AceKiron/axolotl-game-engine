@@ -19,6 +19,10 @@
     <ClInclude Include="src\Axolotl\Log.h">
       <Filter>Axolotl</Filter>
     </ClInclude>
+    <ClInclude Include="src\Axolotl\Events\Event.h" />
+    <ClInclude Include="src\Axolotl\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\Axolotl\Events\KeyEvent.h" />
+    <ClInclude Include="src\Axolotl\Events\MouseEvent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Axolotl\Application.cpp">
