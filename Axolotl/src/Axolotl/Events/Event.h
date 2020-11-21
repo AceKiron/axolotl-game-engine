@@ -1,9 +1,7 @@
 #pragma once
 
+#include "axpch.h"
 #include "../Core.h"
-
-#include <string>
-#include <functional>
 
 namespace Axolotl {
 

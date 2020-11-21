@@ -1,6 +1,8 @@
 #pragma once
 
 #include "Core.h"
+#include "Log.h"
+#include "Events/ApplicationEvent.h"
 #include "Events/Event.h"
 
 namespace Axolotl {

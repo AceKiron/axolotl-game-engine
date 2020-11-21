@@ -17,12 +17,16 @@ project "Axolotl"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "axpch.h"
+	pchsource "Axolotl/src/axpch.cpp" -- Might need to change to Axolotl/src/axpch.cpp
+
 	files {
 		"%{prj.name}/src/**.h",
 		"%{prj.name}/src/**.cpp"
 	}
 
 	includedirs {
+		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include"
 	}
 

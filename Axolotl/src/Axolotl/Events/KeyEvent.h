@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Axolotl {
 
 	class AX_API KeyEvent : public Event

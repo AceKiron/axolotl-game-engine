@@ -1,3 +1,4 @@
+#include "axpch.h"
 #include "Log.h"
 
 namespace Axolotl {

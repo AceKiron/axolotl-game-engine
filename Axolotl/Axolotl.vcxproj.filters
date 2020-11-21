@@ -4,6 +4,9 @@
     <Filter Include="Axolotl">
       <UniqueIdentifier>{48D649AF-B4B5-C84A-BDCD-5321292C2FAC}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Axolotl\Events">
+      <UniqueIdentifier>{2CA116C9-186F-0ACF-0103-7BF5ED6FE633}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Axolotl.h" />
@@ -16,13 +19,22 @@
     <ClInclude Include="src\Axolotl\EntryPoint.h">
       <Filter>Axolotl</Filter>
     </ClInclude>
+    <ClInclude Include="src\Axolotl\Events\ApplicationEvent.h">
+      <Filter>Axolotl\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Axolotl\Events\Event.h">
+      <Filter>Axolotl\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Axolotl\Events\KeyEvent.h">
+      <Filter>Axolotl\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Axolotl\Events\MouseEvent.h">
+      <Filter>Axolotl\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\Axolotl\Log.h">
       <Filter>Axolotl</Filter>
     </ClInclude>
-    <ClInclude Include="src\Axolotl\Events\Event.h" />
-    <ClInclude Include="src\Axolotl\Events\ApplicationEvent.h" />
-    <ClInclude Include="src\Axolotl\Events\KeyEvent.h" />
-    <ClInclude Include="src\Axolotl\Events\MouseEvent.h" />
+    <ClInclude Include="src\axpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Axolotl\Application.cpp">
@@ -31,5 +43,6 @@
     <ClCompile Include="src\Axolotl\Log.cpp">
       <Filter>Axolotl</Filter>
     </ClCompile>
+    <ClCompile Include="src\axpch.cpp" />
   </ItemGroup>
 </Project>
