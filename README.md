@@ -4,4 +4,4 @@ Axolotl game engine is an early-stage interactive game engine for Windows. At th
 
 ## Contact
 [![Discord](https://img.shields.io/badge/Discord_server-darkblue)](https://discord.gg/JUnNZJkE7g)
-[![Twitter](https://img.shields.io/badge/Main_developer's_Twitter-blue)](https://twitter.com/thecherno)
+[![Twitter](https://img.shields.io/badge/Main_developer's_Twitter-blue)](https://twitter.com/AceKiron)
