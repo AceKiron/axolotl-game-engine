@@ -34,3 +34,11 @@ namespace Axolotl {
 #define AX_LOG_WARN(...)	::Axolotl::Log::GetSandboxLogger()->warn(__VA_ARGS__)
 #define AX_LOG_ERROR(...)	::Axolotl::Log::GetSandboxLogger()->error(__VA_ARGS__)
 #define AX_LOG_FATAL(...)	::Axolotl::Log::GetSandboxLogger()->fatal(__VA_ARGS__)
+
+#ifdef AX_ENABLE_ASSERTS
+	#define AX_LOG_ENGINE_ASSERT(x, ...) { if(!(x)) { AX_LOG_ENGINE_FATAL("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
+	#define AX_LOG_ASSERT(x, ...) { if(!(x)) { AX_LOG_FATAL("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
+#else
+	#define AX_LOG_ENGINE_ASSERT(x, ...)
+	#define AX_LOG_ASSERT(x, ...)
+#endif

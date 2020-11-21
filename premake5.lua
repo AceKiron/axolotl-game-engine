@@ -9,6 +9,12 @@ workspace "Axolotl"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+IncludeDir = {}
+IncludeDir["spdlog"] = "Axolotl/vendor/spdlog/include"
+IncludeDir["GLFW"] = "Axolotl/vendor/GLFW/include"
+
+include "Axolotl/vendor/GLFW"
+
 project "Axolotl"
 	location "Axolotl"
 	kind "SharedLib"
@@ -27,7 +33,13 @@ project "Axolotl"
 
 	includedirs {
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"
+		"%{IncludeDir.spdlog}",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links { 
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"
@@ -70,8 +82,9 @@ project "Sandbox"
 	}
 
 	includedirs {
-		"Axolotl/vendor/spdlog/include",
-		"Axolotl/src"
+		"Axolotl/src",
+		"%{IncludeDir.spdlog}",
+		"%{IncludeDir.GLFW}"
 	}
 
 	links {
