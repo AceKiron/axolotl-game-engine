@@ -3,6 +3,9 @@
 #include <GLFW/glfw3.h>
 
 #include "Axolotl/Window.h"
+#include "Axolotl/Events/ApplicationEvent.h"
+#include "Axolotl/Events/KeyEvent.h"
+#include "Axolotl/Events/MouseEvent.h"
 
 namespace Axolotl {
 
